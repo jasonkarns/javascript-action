@@ -1,13 +1,13 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: name
+description: description
 inputs:
-  milliseconds: # id of input
-    description: 'number of milliseconds to wait'
+  an-input:
+    description: description
     required: true
-    default: '1000'
+    default: a-value
 outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+  an-output:
+    description: description
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: node12
+  main: dist/index.js
