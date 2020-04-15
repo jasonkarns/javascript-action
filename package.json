@@ -12,11 +12,20 @@
   "bugs": {
     "url": "https://github.com/actions/javascript-action/issues"
   },
-  "main": "index.js",
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "main": "lib",
   "scripts": {
-    "lint": "standard",
-    "package": "ncc build",
-    "test": "teenytest"
+    "clean": "git checkout -- dist",
+    "lint": "standard --fix",
+    "test": "teenytest",
+    "posttest": "npm run lint",
+    "prepare": "ncc build",
+    "preversion": "npm run prepare",
+    "version": "git add -- dist",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "@actions/core": "^1.2.3"
@@ -28,7 +37,9 @@
   },
   "keywords": [
     "GitHub",
-    "Actions",
-    "JavaScript"
-  ]
+    "Actions"
+  ],
+  "standard": {
+    "ignore": "dist"
+  }
 }
