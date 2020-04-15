@@ -1,28 +1,23 @@
 {
   "name": "javascript-action",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "JavaScript Action Template",
+  "homepage": "https://github.com/actions/javascript-action#readme",
+  "license": "MIT",
+  "author": "Jason Karns <jason.karns@gmail.com> (http://jasonkarns.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/javascript-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/actions/javascript-action/issues"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
     "package": "ncc build index.js -o dist",
     "test": "eslint index.js && jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
-  },
-  "keywords": [
-    "GitHub",
-    "Actions",
-    "JavaScript"
-  ],
-  "author": "GitHub",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
-  },
-  "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
     "@actions/core": "^1.1.1"
   },
@@ -30,5 +25,10 @@
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.3.0",
     "jest": "^24.9.0"
-  }
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ]
 }
